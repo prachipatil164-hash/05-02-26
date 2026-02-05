@@ -1,40 +1,50 @@
-// Arithmetic Operations using Switch Case
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arithmetic Operations with Switch</title>
+</head>
+<body>
+  <h2>Arithmetic Operations using Switch Case</h2>
 
-function calculate(num1, num2, operator) {
-    let result;
+  <script>
+    function calculate(num1, num2, operator) {
+      let result;
 
-    switch (operator) {
+      switch (operator) {
         case '+':
-            result = num1 + num2;
-            break;
+          result = num1 + num2;
+          break;
         case '-':
-            result = num1 - num2;
-            break;
+          result = num1 - num2;
+          break;
         case '*':
-            result = num1 * num2;
-            break;
+          result = num1 * num2;
+          break;
         case '/':
-            if (num2 !== 0) {
-                result = num1 / num2;
-            } else {
-                result = "Error: Division by zero!";
-            }
-            break;
+          if (num2 !== 0) {
+            result = num1 / num2;
+          } else {
+            result = "Error: Division by zero!";
+          }
+          break;
         case '%':
-            result = num1 % num2;
-            break;
+          result = num1 % num2;
+          break;
         default:
-            result = "Invalid operator!";
+          result = "Invalid operator!";
+      }
+
+      return result;
     }
 
-    return result;
-}
-
-// Example usage:
-console.log(calculate(10, 5, '+')); // Output: 15
-console.log(calculate(10, 5, '-')); // Output: 5
-console.log(calculate(10, 5, '*')); // Output: 50
-console.log(calculate(10, 5, '/')); // Output: 2
-console.log(calculate(10, 5, '%')); // Output: 0
-console.log(calculate(10, 0, '/')); // Output: Error: Division by zero!
-console.log(calculate(10, 5, '^')); // Output: Invalid operator!
+    // Example usage:
+    document.write("10 + 5 = " + calculate(10, 5, '+') + "<br>");
+    document.write("10 - 5 = " + calculate(10, 5, '-') + "<br>");
+    document.write("10 * 5 = " + calculate(10, 5, '*') + "<br>");
+    document.write("10 / 5 = " + calculate(10, 5, '/') + "<br>");
+    document.write("10 % 5 = " + calculate(10, 5, '%') + "<br>");
+    document.write("10 / 0 = " + calculate(10, 0, '/') + "<br>");
+    document.write("10 ^ 5 = " + calculate(10, 5, '^') + "<br>");
+  </script>
+</body>
+</html>
